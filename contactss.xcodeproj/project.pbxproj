@@ -11,6 +11,9 @@
 		94F19F76296FCCEF00D38E62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F19F75296FCCEF00D38E62 /* ContentView.swift */; };
 		94F19F78296FCCF000D38E62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F19F77296FCCF000D38E62 /* Assets.xcassets */; };
 		94F19F7B296FCCF000D38E62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F19F7A296FCCF000D38E62 /* Preview Assets.xcassets */; };
+		94F19F82296FD30900D38E62 /* Tutor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F19F81296FD30900D38E62 /* Tutor.xcassets */; };
+		94F19F84296FD31D00D38E62 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F19F83296FD31D00D38E62 /* Tutor.swift */; };
+		94F19F86296FDB1700D38E62 /* TutorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F19F85296FDB1700D38E62 /* TutorDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		94F19F75296FCCEF00D38E62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		94F19F77296FCCF000D38E62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94F19F7A296FCCF000D38E62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		94F19F81296FD30900D38E62 /* Tutor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Tutor.xcassets; path = ../../../../Downloads/Resources/Tutor.xcassets; sourceTree = "<group>"; };
+		94F19F83296FD31D00D38E62 /* Tutor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutor.swift; path = ../../../../Downloads/Resources/Tutor.swift; sourceTree = "<group>"; };
+		94F19F85296FDB1700D38E62 /* TutorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +59,10 @@
 			children = (
 				94F19F73296FCCEF00D38E62 /* contactssApp.swift */,
 				94F19F75296FCCEF00D38E62 /* ContentView.swift */,
+				94F19F83296FD31D00D38E62 /* Tutor.swift */,
+				94F19F85296FDB1700D38E62 /* TutorDetail.swift */,
 				94F19F77296FCCF000D38E62 /* Assets.xcassets */,
+				94F19F81296FD30900D38E62 /* Tutor.xcassets */,
 				94F19F79296FCCF000D38E62 /* Preview Content */,
 			);
 			path = contactss;
@@ -77,6 +86,7 @@
 				94F19F6C296FCCEF00D38E62 /* Sources */,
 				94F19F6D296FCCEF00D38E62 /* Frameworks */,
 				94F19F6E296FCCEF00D38E62 /* Resources */,
+				94F19F87296FE49A00D38E62 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -127,10 +137,31 @@
 			files = (
 				94F19F7B296FCCF000D38E62 /* Preview Assets.xcassets in Resources */,
 				94F19F78296FCCF000D38E62 /* Assets.xcassets in Resources */,
+				94F19F82296FD30900D38E62 /* Tutor.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		94F19F87296FE49A00D38E62 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94F19F6C296FCCEF00D38E62 /* Sources */ = {
@@ -138,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				94F19F76296FCCEF00D38E62 /* ContentView.swift in Sources */,
+				94F19F86296FDB1700D38E62 /* TutorDetail.swift in Sources */,
+				94F19F84296FD31D00D38E62 /* Tutor.swift in Sources */,
 				94F19F74296FCCEF00D38E62 /* contactssApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
