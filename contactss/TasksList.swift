@@ -15,13 +15,13 @@ struct TasksList: View {
                     Text("TODAY")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                    ForEach(tasksList, id: \.id) { lTasks in
+                    ForEach(data, id: \.id) { lTasks in
                         LongCard(lTasks: lTasks)
                     }
                     Text("TOMMORROW")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                    ForEach(tasksList, id: \.id) { lTasks in
+                    ForEach(data, id: \.id) { lTasks in
                         LongCard(lTasks: lTasks)
                     }
                 }.padding()
