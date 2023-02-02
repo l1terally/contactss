@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct LongCard: View {
+struct ShortCard: View {
     var df: DateFormatter = {
         let df = DateFormatter()
         df.dateFormat = "MMM d, yyyy"
@@ -14,18 +14,12 @@ struct LongCard: View {
             ZStack {
                 VStack(alignment: .leading) {
                     HStack {
-                        Image(systemName: isSelected ? "checkmark.square.fill" : "square")
-                            .onTapGesture {
-                                isSelected.toggle()
-                            }
-                            .padding(.top, 8.0)
-                            .font(Font.system(size: 22))
-                            .foregroundColor(isSelected ? .black : .gray)
-                        Text("\((df.string(from: lTasks.date)))")
-                            .font(.custom("Arial", size: 20))
-                            .padding(.top, 10.0)
-                            .padding(.leading, 4.0)
+                        Text("Some friday stuff actually, and awesome plans")
+                            .font(.custom("Arial", size: 19))
                             .fontWeight(.bold)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(4)
+                            .padding(.leading, 5)
                         Spacer()
                         Button(action: {
                             //
@@ -33,10 +27,11 @@ struct LongCard: View {
                         { Image(systemName: "ellipsis")
                         }
                         .rotationEffect(Angle(degrees: 90))
-                        .padding(.top, 10.0)
                         .foregroundColor(.gray)
                         .font(Font.system(size: 17))
-                    }.padding()
+                        .offset(x:-3, y: -30)
+                    }
+        
                     HStack {
                         Image(systemName: isMiniSelected ? "star.fill" : "star")
                             .onTapGesture {
@@ -44,28 +39,37 @@ struct LongCard: View {
                             }
                             .font(.subheadline)
                             .fontWeight(.bold)
-                        Text("TEXT")
+                        
+                        Text("12:00-13:00")
                             .font(.subheadline)
                             .fontWeight(.bold)
-                    }.padding(.horizontal, 26.0)
-                        .padding(.vertical, 5)
-                        .offset(x: 27, y: -15)
+                        Image(systemName: isSelected ? "checkmark.square.fill" : "square")
+                            .onTapGesture {
+                                isSelected.toggle()
+                            }
+                            .font(Font.system(size: 22))
+                            .foregroundColor(isSelected ? .black : .gray)
+                            .padding(.leading)
+                            .offset(x: 0, y: -2.5)
+                    }.padding(.top)
+                    .padding(.leading, 5)
                 }
-            }.frame(width: 360, height: 100)
+            }.frame(width: 175, height: 150)
                 .background(Color("Color"))
                 .cornerRadius(10)
                 .shadow(radius: 5)
                 .ignoresSafeArea(.all)
-        }.padding(.all, 0)
+        }
     }
 }
 
 
 
 
-struct LongCard_Previews: PreviewProvider {
+struct ShortCard_Previews: PreviewProvider {
     static var previews: some View {
-        LongCard(lTasks: data[0])
+        ShortCard(lTasks: data[0])
     }
 }
+
 

@@ -11,11 +11,13 @@
 		947BE016298A7A84002EDDC6 /* Tutors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BE015298A7A84002EDDC6 /* Tutors.swift */; };
 		947BE01B298A7AFA002EDDC6 /* LongCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BE01A298A7AFA002EDDC6 /* LongCard.swift */; };
 		947BE01D298A7B19002EDDC6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BE01C298A7B19002EDDC6 /* Model.swift */; };
+		947BE04F298BAB3A002EDDC6 /* ShortCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BE04E298BAB3A002EDDC6 /* ShortCard.swift */; };
+		947BE052298BAB81002EDDC6 /* LongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BE051298BAB81002EDDC6 /* LongCardView.swift */; };
+		947BE054298BAB8E002EDDC6 /* ShortCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947BE053298BAB8E002EDDC6 /* ShortCardView.swift */; };
 		94F19F74296FCCEF00D38E62 /* contactssApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F19F73296FCCEF00D38E62 /* contactssApp.swift */; };
 		94F19F76296FCCEF00D38E62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F19F75296FCCEF00D38E62 /* ContentView.swift */; };
 		94F19F78296FCCF000D38E62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F19F77296FCCF000D38E62 /* Assets.xcassets */; };
 		94F19F7B296FCCF000D38E62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F19F7A296FCCF000D38E62 /* Preview Assets.xcassets */; };
-		94F19F82296FD30900D38E62 /* Tutor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94F19F81296FD30900D38E62 /* Tutor.xcassets */; };
 		94F19F86296FDB1700D38E62 /* TutorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F19F85296FDB1700D38E62 /* TutorDetail.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,12 +26,14 @@
 		947BE015298A7A84002EDDC6 /* Tutors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutors.swift; sourceTree = "<group>"; };
 		947BE01A298A7AFA002EDDC6 /* LongCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongCard.swift; sourceTree = "<group>"; };
 		947BE01C298A7B19002EDDC6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		947BE04E298BAB3A002EDDC6 /* ShortCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCard.swift; sourceTree = "<group>"; };
+		947BE051298BAB81002EDDC6 /* LongCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongCardView.swift; sourceTree = "<group>"; };
+		947BE053298BAB8E002EDDC6 /* ShortCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortCardView.swift; sourceTree = "<group>"; };
 		94F19F70296FCCEF00D38E62 /* contactss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contactss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94F19F73296FCCEF00D38E62 /* contactssApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactssApp.swift; sourceTree = "<group>"; };
 		94F19F75296FCCEF00D38E62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		94F19F77296FCCF000D38E62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94F19F7A296FCCF000D38E62 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		94F19F81296FD30900D38E62 /* Tutor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Tutor.xcassets; path = ../../../../Downloads/Resources/Tutor.xcassets; sourceTree = "<group>"; };
 		94F19F85296FDB1700D38E62 /* TutorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				947BE01A298A7AFA002EDDC6 /* LongCard.swift */,
+				947BE04E298BAB3A002EDDC6 /* ShortCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -58,6 +63,15 @@
 				947BE01C298A7B19002EDDC6 /* Model.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		947BE050298BAB68002EDDC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				947BE051298BAB81002EDDC6 /* LongCardView.swift */,
+				947BE053298BAB8E002EDDC6 /* ShortCardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		94F19F67296FCCEF00D38E62 = {
@@ -85,9 +99,9 @@
 				94F19F85296FDB1700D38E62 /* TutorDetail.swift */,
 				941A260129756C0E007A570B /* TasksList.swift */,
 				94F19F77296FCCF000D38E62 /* Assets.xcassets */,
+				947BE050298BAB68002EDDC6 /* Views */,
 				947BE01E298A7B30002EDDC6 /* Models */,
 				947BE019298A7AE3002EDDC6 /* Components */,
-				94F19F81296FD30900D38E62 /* Tutor.xcassets */,
 				94F19F79296FCCF000D38E62 /* Preview Content */,
 			);
 			path = contactss;
@@ -162,7 +176,6 @@
 			files = (
 				94F19F7B296FCCF000D38E62 /* Preview Assets.xcassets in Resources */,
 				94F19F78296FCCF000D38E62 /* Assets.xcassets in Resources */,
-				94F19F82296FD30900D38E62 /* Tutor.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +209,10 @@
 				947BE01D298A7B19002EDDC6 /* Model.swift in Sources */,
 				94F19F76296FCCEF00D38E62 /* ContentView.swift in Sources */,
 				94F19F86296FDB1700D38E62 /* TutorDetail.swift in Sources */,
+				947BE054298BAB8E002EDDC6 /* ShortCardView.swift in Sources */,
 				941A260229756C0E007A570B /* TasksList.swift in Sources */,
+				947BE04F298BAB3A002EDDC6 /* ShortCard.swift in Sources */,
+				947BE052298BAB81002EDDC6 /* LongCardView.swift in Sources */,
 				947BE016298A7A84002EDDC6 /* Tutors.swift in Sources */,
 				94F19F74296FCCEF00D38E62 /* contactssApp.swift in Sources */,
 				947BE01B298A7AFA002EDDC6 /* LongCard.swift in Sources */,
