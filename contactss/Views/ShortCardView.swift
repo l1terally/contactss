@@ -3,16 +3,10 @@ import SwiftUI
 struct ShortCardView: View {
     @State private var isOn = true
     @State private var isOnMini = false
-    var columns = [GridItem(.adaptive(minimum: 160), spacing: 30)]
+    var columns = [GridItem(.adaptive(minimum: 160), spacing: 0)]
     var body: some View {
         ScrollView() {
             VStack(alignment: .leading) {
-                HStack {
-                    Text("TODAY")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
-                }.background(Color.white)
                 LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(data, id: \.id) { lTasks in
                         ShortCard(lTasks: lTasks)
@@ -25,8 +19,9 @@ struct ShortCardView: View {
                     ForEach(data, id: \.id) { lTasks in
                         ShortCard(lTasks: lTasks)
                     }
-                }
-            }.padding(.horizontal)
+                }.padding(.vertical, -7)
+            }
+                .padding(.vertical)
         }
     }
 }

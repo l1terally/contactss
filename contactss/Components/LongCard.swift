@@ -51,12 +51,15 @@ struct LongCard: View {
                         .padding(.vertical, 5)
                         .offset(x: 27, y: -15)
                 }
-            }.frame(width: 360, height: 100)
+            }.frame(width: 370, height: 100)
                 .background(Color("Color"))
                 .cornerRadius(10)
                 .shadow(radius: 5)
                 .ignoresSafeArea(.all)
-        }.padding(.all, 0)
+                .onTapGesture {
+                }
+        }.padding(.vertical, 5)
+            .padding(.horizontal, 11)
     }
 }
 
