@@ -3,25 +3,28 @@ import SwiftUI
 struct LongCardView: View {
     @State private var isOn = true
     @State private var isOnMini = false
+    @ObservedObject var lists = Lists()
+    @State var dates: [Day] = []
+    let calendarRepository = CalendarRepository()
     var body: some View {
-            ScrollView {
-                    VStack(alignment: .leading) {
-                        ForEach(data, id: \.id) { lTasks in
-                            LongCard(lTasks: lTasks)
-                        }
-                }
-                VStack (alignment: .leading){
-                    Section(header: Text("TOMORROW")
-                        .font(.largeTitle)
+        ScrollView {
+            ForEach(dates) { day in
+                VStack(alignment: .leading) {
+                    Section(header: Text("\(day.dateString)")
                         .fontWeight(.bold)
-                        .foregroundColor(.black)
-                    ) {
-                        ForEach(data, id: \.id) { lTasks in
+                        .font(.largeTitle)
+                    ){
+                        ForEach(lists.items) { lTasks in
                             LongCard(lTasks: lTasks)
                         }
-                    }.padding(.vertical, 2)
+                    }
                 }
+            }.onAppear {
+                calendarRepository.getDates(completion: { ldates in
+                    self.dates = ldates
+                })
             }
+        }
     }
 }
 

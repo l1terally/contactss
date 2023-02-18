@@ -4,13 +4,14 @@ struct TasksList: View {
     @State private var isOn = true
     @State private var isOnMini = false
     @State var switc = 1
+    @ObservedObject var lists = Lists()
     var body: some View {
         ZStack {
             NavigationView {
                 VStack {
                     if switc == 1 {
                         LongShortView()
-                    }else{
+                    } else {
                         Profile()
                     }
                     HStack {
@@ -32,7 +33,7 @@ struct TasksList: View {
                         }
                         Spacer()
                             VStack {
-                                NavigationLink(destination: TaskAdd()){
+                                NavigationLink(destination: TaskAdd(lists: Lists())) {
                                 Image(systemName: "plus")
                                     .padding(.all)
                                     .frame(width: 80)

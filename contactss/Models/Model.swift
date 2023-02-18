@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Task: Identifiable {
+struct Task: Identifiable, Codable {
     var id = UUID()
     var name: String
     var timeFrom: Date
@@ -30,6 +30,26 @@ var tasksList = [
                  Task(name: "Task6", timeFrom: .init(timeIntervalSince1970: 1674950400), timeTo: .init(timeIntervalSince1970: 1674957600)),
                  Task(name: "Task7", timeFrom: .init(timeIntervalSince1970: 1674950400), timeTo: .init(timeIntervalSince1970: 1674957600)),
                  Task(name: "Task8", timeFrom: .init(timeIntervalSince1970: 1674950400), timeTo: .init(timeIntervalSince1970: 1674957600))]
+
+class Lists: ObservableObject {
+    @Published var items = [Task](){
+        didSet {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(items) {
+                UserDefaults.standard.set(encoded, forKey: "Items")
+            }
+        }
+    }
+    init() {
+        if let items = UserDefaults.standard.data(forKey: "Items") {
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([Task].self, from: items) {
+                self.items = decoded
+                return
+            }
+        }
+    }
+}
 
 let dict = Dictionary(grouping: tasksList) { task in
     let dateComponents = Calendar.current.dateComponents([.day, .month, .year], from: task.timeFrom)

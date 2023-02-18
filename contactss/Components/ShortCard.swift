@@ -6,7 +6,7 @@ struct ShortCard: View {
         df.dateFormat = "MMM d, yyyy"
         return df
     }()
-    var lTasks: SectionData
+    var lTasks: Task
     @State private var isSelected: Bool = false
     @State private var isMiniSelected: Bool = false
     var body: some View {
@@ -14,7 +14,7 @@ struct ShortCard: View {
             ZStack {
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("Some friday stuff actually, and awesome plans")
+                        Text("\(lTasks.name)")
                             .font(.custom("Arial", size: 19))
                             .fontWeight(.bold)
                             .multilineTextAlignment(.leading)
@@ -68,7 +68,7 @@ struct ShortCard: View {
 
 struct ShortCard_Previews: PreviewProvider {
     static var previews: some View {
-        ShortCard(lTasks: data[0])
+        ShortCard(lTasks: tasksList[0])
     }
 }
 

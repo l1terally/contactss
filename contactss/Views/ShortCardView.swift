@@ -4,24 +4,29 @@ struct ShortCardView: View {
     @State private var isOn = true
     @State private var isOnMini = false
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 0)]
+    @State var dates: [Day] = []
+    let calendarRepository = CalendarRepository()
+    @ObservedObject var lists = Lists()
     var body: some View {
         ScrollView() {
-            VStack(alignment: .leading) {
-                LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(data, id: \.id) { lTasks in
-                        ShortCard(lTasks: lTasks)
+            ForEach(dates) { day in
+                    VStack(alignment: .leading) {
+                        Section(header: Text("\(day.dateString)")
+                            .fontWeight(.bold)
+                            .font(.largeTitle)
+                        ){
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(lists.items, id: \.id) { lTasks in
+                                ShortCard(lTasks: lTasks)
+                            }
+                        }
                     }
                 }
-                Text("TOMORROW")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                LazyVGrid(columns: columns) {
-                    ForEach(data, id: \.id) { lTasks in
-                        ShortCard(lTasks: lTasks)
-                    }
-                }.padding(.vertical, -7)
+            }.onAppear {
+                calendarRepository.getDates(completion: { ldates in
+                    self.dates = ldates
+                })
             }
-                .padding(.vertical)
         }
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct ContactssApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TasksList()
         }
     }
 }
